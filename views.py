@@ -9,7 +9,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.decorators.http import require_POST
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import (ListView, DetailView, CreateView,
+                                  UpdateView, DeleteView)
 
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
@@ -22,8 +23,10 @@ from drf_spectacular.utils import extend_schema
 
 from .models import *
 from .forms import *
-from .serializers import (UserSerializer, BookSerializer, RequestSerializer, PublisherSerializer, AuthorSerializer,
-                          GenreSerializer, LanguageSerializer, CommentSerializer, EvaluationSerializer)
+from .serializers import (UserSerializer, BookSerializer, RequestSerializer,
+                          PublisherSerializer, AuthorSerializer,
+                          GenreSerializer, LanguageSerializer,
+                          CommentSerializer, EvaluationSerializer)
 
 # Authentication Views
 class RegisterView(View):
